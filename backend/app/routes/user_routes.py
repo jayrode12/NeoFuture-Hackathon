@@ -1,9 +1,13 @@
 from fastapi import APIRouter, HTTPException, Body, Depends, Response
-from app.schemas.user import UserCreate, UserResponse, UserLogin, StandardResponse
+from app.schemas.user import UserCreate, UserResponse, UserLogin, StandardResponse, CheckUserRequest
 from app.services.user_service import UserService
 from app.utils.auth import get_current_user
 
 router = APIRouter()
+
+@router.post("/check", response_model=StandardResponse)
+async def check_user_exists(check_data: CheckUserRequest = Body(...)):
+    return await UserService.check_user_exists(check_data)
 
 @router.post("/register", response_model=StandardResponse)
 async def register_user(user: UserCreate = Body(...)):
