@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#7d2b21",
+                    "surface-container": "#eeeeee",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f9f9f9",
+                    "on-primary-fixed-variant": "#353e91",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#f9f9f9",
+                    "outline": "#767683",
+                    "on-secondary-container": "#6c5000",
+                    "surface-container-low": "#f3f3f3",
+                    "primary-container": "#010766",
+                    "background": "#f9f9f9",
+                    "primary": "#000000",
+                    "surface-container-high": "#e8e8e8",
+                    "on-primary-fixed": "#010766",
+                    "tertiary": "#000000",
+                    "on-secondary-fixed-variant": "#5b4300",
+                    "inverse-primary": "#bdc2ff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "primary-fixed": "#e0e0ff",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#ffb4a8",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#c6c5d3",
+                    "surface-variant": "#e2e2e2",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#410000",
+                    "on-surface-variant": "#464651",
+                    "on-secondary-fixed": "#251a00",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#bdc2ff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#785a00",
+                    "on-tertiary-container": "#cb6657",
+                    "secondary-fixed-dim": "#f9bd00",
+                    "tertiary-fixed": "#ffdad4",
+                    "surface-dim": "#dadada",
+                    "on-primary-container": "#747cd3",
+                    "tertiary-container": "#410000",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#4e56ab",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary-container": "#fdc002",
+                    "on-surface": "#1a1c1c",
+                    "inverse-surface": "#2f3131",
+                    "secondary-fixed": "#ffdf9d",
+                    "on-background": "#1a1c1c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed">
+<nav class="fixed top-0 left-0 w-full flex justify-between items-center px-8 py-6 max-w-full bg-slate-50/80 backdrop-blur-xl z-50 shadow-[0_40px_40px_-15px_rgba(26,28,28,0.06)]">
+<div class="text-2xl font-bold tracking-tighter bg-gradient-to-br from-indigo-900 to-indigo-500 bg-clip-text text-transparent">
+            Invisible India
+        </div>
+<div class="hidden md:flex items-center gap-8 font-['Manrope'] font-bold tracking-tight">
+<a class="text-slate-600 hover:text-indigo-900 transition-colors" href="#">Scheme Matcher</a>
+<a class="text-slate-600 hover:text-indigo-900 transition-colors" href="#">Trust Score</a>
+<a class="text-slate-600 hover:text-indigo-900 transition-colors" href="#">Help</a>
+<a class="text-indigo-900 border-b-2 border-amber-400 pb-1" href="#">Dashboard</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-200/50 rounded-full transition-all scale-95 active:scale-90">
+<span class="material-symbols-outlined">language</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+<header class="mb-20">
+<h1 class="text-5xl font-bold tracking-tight text-on-surface mb-4">Application Journey</h1>
+<p class="text-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                Tracking your progress toward financial resilience. Each step forward is a milestone in your growth story.
+            </p>
+</header>
+<section class="relative">
+<div class="flex flex-col gap-12">
+<div class="flex flex-col md:flex-row gap-8 items-start group">
+<div class="flex flex-col items-center pt-2">
+<div class="w-4 h-4 rounded-full bg-secondary shadow-[0_0_20px_rgba(120,90,0,0.4)] z-10"></div>
+<div class="w-px h-full bg-outline-variant/30 mt-4 hidden md:block"></div>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-[0_40px_40px_-15px_rgba(26,28,28,0.04)] hover:shadow-[0_40px_60px_-15px_rgba(26,28,28,0.08)] transition-all duration-500 border border-transparent hover:border-outline-variant/10">
+<div class="flex flex-col lg:flex-row justify-between lg:items-center gap-6">
+<div class="space-y-2">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-xs font-bold tracking-widest text-secondary uppercase">24 Oct 2023</span>
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold">Under Review</span>
+</div>
+<h3 class="text-3xl font-bold text-on-surface">Mudra Loan - Shishu</h3>
+<p class="text-on-surface-variant leading-relaxed">Micro-credit support for small business start-ups. Essential capital for scaling local operations.</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-8 py-4 bg-gradient-to-br from-primary-container to-on-primary-container text-on-primary rounded-xl font-bold transition-transform active:scale-95 shadow-[0_20px_40px_rgba(1,7,102,0.15)]">
+                                    View Details
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-start group">
+<div class="flex flex-col items-center pt-2">
+<div class="w-4 h-4 rounded-full bg-on-primary-container/40 z-10"></div>
+<div class="w-px h-full bg-outline-variant/30 mt-4 hidden md:block"></div>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-[0_40px_40px_-15px_rgba(26,28,28,0.04)] hover:shadow-[0_40px_60px_-15px_rgba(26,28,28,0.08)] transition-all duration-500">
+<div class="flex flex-col lg:flex-row justify-between lg:items-center gap-6">
+<div class="space-y-2">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">12 Sep 2023</span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-xs font-bold">Approved</span>
+</div>
+<h3 class="text-3xl font-bold text-on-surface">PM Jan Dhan Yojana</h3>
+<p class="text-on-surface-variant leading-relaxed">Universal access to banking services. Your foundation for financial inclusion and direct benefit transfers.</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-8 py-4 bg-surface-container text-on-surface rounded-xl font-bold transition-transform active:scale-95">
+                                    View Details
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-start group">
+<div class="flex flex-col items-center pt-2">
+<div class="w-4 h-4 rounded-full bg-error/20 z-10"></div>
+<div class="w-px h-full bg-outline-variant/30 mt-4 hidden md:block"></div>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-[0_40px_40px_-15px_rgba(26,28,28,0.04)] hover:shadow-[0_40px_60px_-15px_rgba(26,28,28,0.08)] transition-all duration-500">
+<div class="flex flex-col lg:flex-row justify-between lg:items-center gap-6">
+<div class="space-y-2">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">05 Aug 2023</span>
+<span class="px-3 py-1 rounded-full bg-error-container text-on-error-container text-xs font-bold">Pending Action</span>
+</div>
+<h3 class="text-3xl font-bold text-on-surface">Atal Pension Yojana</h3>
+<p class="text-on-surface-variant leading-relaxed">Social security scheme providing a defined pension. Document verification required for final activation.</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-8 py-4 bg-surface-container text-on-surface rounded-xl font-bold transition-transform active:scale-95">
+                                    View Details
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-start group">
+<div class="flex flex-col items-center pt-2">
+<div class="w-4 h-4 rounded-full bg-on-primary-container/20 z-10"></div>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-[0_40px_40px_-15px_rgba(26,28,28,0.04)] opacity-70">
+<div class="flex flex-col lg:flex-row justify-between lg:items-center gap-6">
+<div class="space-y-2">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">15 Jul 2023</span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-xs font-bold">Approved</span>
+</div>
+<h3 class="text-3xl font-bold text-on-surface">Digital Saksharta Abhiyan</h3>
+<p class="text-on-surface-variant leading-relaxed">IT training for rural citizens. Completed certification for digital literacy and awareness.</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-8 py-4 bg-surface-container text-on-surface rounded-xl font-bold transition-transform active:scale-95">
+                                    View Details
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-32">
+<div class="bg-primary-container rounded-xl p-12 md:p-20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="relative z-10 max-w-xl text-left">
+<h2 class="text-4xl md:text-5xl font-bold text-on-primary mb-6 leading-tight">Your Trust Score is Growing.</h2>
+<p class="text-on-primary-container text-lg leading-relaxed mb-10">
+                        By maintaining consistent application status and verified profiles, you unlock higher tier schemes and lower interest rates.
+                    </p>
+<button class="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform">
+                        Explore Tier 2 Schemes
+                    </button>
+</div>
+<div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-on-primary-container/20 to-transparent flex items-center justify-center border border-on-primary-container/30">
+<div class="text-center">
+<span class="text-6xl font-bold text-on-primary block">742</span>
+<span class="text-secondary font-bold tracking-widest uppercase text-sm mt-2">Excellent</span>
+</div>
+<div class="absolute inset-0 rounded-full border-b-4 border-amber-400 rotate-45"></div>
+</div>
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-on-primary-container/5 rounded-full blur-3xl"></div>
+</div>
+</section>
+</main>
+<footer class="bg-slate-50 border-t-0 py-16 px-8 mt-auto">
+<div class="w-full flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
+<div class="font-['Manrope'] font-bold text-indigo-900 text-xl">
+                Invisible India
+            </div>
+<div class="flex gap-8 font-['Inter'] text-sm text-slate-500">
+<a class="hover:text-amber-500 transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-amber-500 transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-amber-500 transition-colors" href="#">Worker Rights</a>
+<a class="hover:text-amber-500 transition-colors" href="#">Partner API</a>
+</div>
+<div class="text-slate-500 font-['Inter'] text-sm leading-relaxed text-center md:text-right">
+                © 2024 Invisible India. Empowering the Resilient Horizon.
+            </div>
+</div>
+</footer>
+</body></html>
