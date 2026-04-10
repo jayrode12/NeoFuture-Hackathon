@@ -1,6 +1,9 @@
 from fastapi import APIRouter, HTTPException
 from app.schemas.scheme import SchemeMatchRequest, SchemeResponse
 from app.services.scheme_service import match_schemes, get_user_schemes
+from model.predict import predict_pipeline
+from model.explain import explain_prediction
+from fastapi import APIRouter
 
 router = APIRouter()
 
@@ -15,3 +18,23 @@ async def get_schemes(userId: str):
     if not scheme_data:
         raise HTTPException(status_code=404, detail="Schemes not found for user")
     return scheme_data
+
+
+
+router = APIRouter()
+
+
+@router.post("/predict")
+def predict(data: dict):
+    return predict_pipeline(data)
+
+
+@router.post("/predict-with-explain")
+def predict_with_explain(data: dict):
+    result = predict_pipeline(data)
+    explanation = explain_prediction(data)
+
+    return {
+        **result,
+        "explanation": explanation
+    }

@@ -1,0 +1,15 @@
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.4.2
+xgboost==2.0.3
+joblib==1.3.2
+
+# API (if used here or later)
+fastapi==0.110.0
+uvicorn==0.29.0
+
+# Explainable AI
+shap==0.45.0
+
+# Optional but useful
+matplotlib==3.8.4
