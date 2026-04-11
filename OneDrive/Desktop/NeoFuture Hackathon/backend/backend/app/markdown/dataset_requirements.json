@@ -1,0 +1,112 @@
+COLLECTION 1 — workers.json
+
+[
+  {
+    "workerId": "w001",
+    "name": "Ramesh Kumar",
+    "phone": "9876543210",
+    "aadhaarMasked": "XXXX-XXXX-1234",
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "workType": "Vegetable Vendor",
+    "createdAt": "2026-04-10T10:00:00Z"
+  },
+  {
+    "workerId": "w002",
+    "name": "Sita Devi",
+    "phone": "9123456780",
+    "aadhaarMasked": "XXXX-XXXX-5678",
+    "state": "Maharashtra",
+    "district": "Pune",
+    "workType": "Domestic Worker",
+    "createdAt": "2026-04-10T10:05:00Z"
+  }
+]
+
+
+COLLECTION 2 — verification_data.json
+
+[
+  {
+    "workerId": "w001",
+    "aadhaar_verified": 1,
+    "upi_transactions_count": 80,
+    "upi_avg_monthly_amount": 15000,
+    "location_lat": 19.9975,
+    "location_lng": 73.7898,
+    "location_consistency": 0.9,
+    "peer_attestations": 3,
+    "customer_rating_avg": 4.5,
+    "work_duration_months": 36,
+    "document_score": 0.8,
+    "consent_score": 1
+  },
+  {
+    "workerId": "w002",
+    "aadhaar_verified": 1,
+    "upi_transactions_count": 25,
+    "upi_avg_monthly_amount": 7000,
+    "location_lat": 18.5204,
+    "location_lng": 73.8567,
+    "location_consistency": 0.6,
+    "peer_attestations": 2,
+    "customer_rating_avg": 3.8,
+    "work_duration_months": 12,
+    "document_score": 0.6,
+    "consent_score": 1
+  }
+]
+
+
+COLLECTION 3 — scores.json
+
+[
+  {
+    "workerId": "w001",
+    "iwts_score": 82,
+    "score_band": "HIGH",
+    "eligibility": "Full Credit Access",
+    "breakdown": {
+      "upi": 28,
+      "location": 22,
+      "peer": 15,
+      "rating": 10,
+      "duration": 7
+    },
+    "calculatedAt": "2026-04-10T10:10:00Z"
+  },
+  {
+    "workerId": "w002",
+    "iwts_score": 55,
+    "score_band": "MEDIUM",
+    "eligibility": "Basic Schemes",
+    "breakdown": {
+      "upi": 10,
+      "location": 15,
+      "peer": 10,
+      "rating": 8,
+      "duration": 4
+    },
+    "calculatedAt": "2026-04-10T10:12:00Z"
+  }
+]
+
+
+COLLECTION 5 — applications.json
+
+[
+  {
+    "applicationId": "a001",
+    "workerId": "w001",
+    "schemeId": "s001",
+    "status": "approved",
+    "appliedAt": "2026-04-10T10:15:00Z"
+  },
+  {
+    "applicationId": "a002",
+    "workerId": "w002",
+    "schemeId": "s003",
+    "status": "pending",
+    "appliedAt": "2026-04-10T10:20:00Z"
+  }
+]

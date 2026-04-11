@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Worker Management | Editorial Resilience</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#ffb4a8",
+                    "on-tertiary-fixed": "#410000",
+                    "on-background": "#1a1c1c",
+                    "surface": "#f9f9f9",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#7d2b21",
+                    "surface-variant": "#e2e2e2",
+                    "on-primary-fixed": "#010766",
+                    "on-error-container": "#93000a",
+                    "secondary": "#785a00",
+                    "outline": "#767683",
+                    "on-tertiary-container": "#cb6657",
+                    "primary-fixed": "#e0e0ff",
+                    "on-secondary-fixed": "#251a00",
+                    "primary-container": "#010766",
+                    "inverse-surface": "#2f3131",
+                    "primary": "#000000",
+                    "error": "#ba1a1a",
+                    "on-surface": "#1a1c1c",
+                    "on-surface-variant": "#464651",
+                    "inverse-primary": "#bdc2ff",
+                    "background": "#f9f9f9",
+                    "tertiary": "#000000",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "tertiary-container": "#410000",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary-container": "#fdc002",
+                    "surface-container": "#eeeeee",
+                    "secondary-fixed-dim": "#f9bd00",
+                    "on-secondary-container": "#6c5000",
+                    "primary-fixed-dim": "#bdc2ff",
+                    "surface-dim": "#dadada",
+                    "on-primary-container": "#747cd3",
+                    "tertiary-fixed": "#ffdad4",
+                    "surface-tint": "#4e56ab",
+                    "secondary-fixed": "#ffdf9d",
+                    "on-secondary-fixed-variant": "#5b4300",
+                    "surface-bright": "#f9f9f9",
+                    "on-primary-fixed-variant": "#353e91",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#c6c5d3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- Predicted SideNavBar -->
+<aside class="hidden md:flex flex-col h-screen w-72 fixed left-0 top-0 bg-slate-50 dark:bg-slate-950 py-8 px-6 gap-y-2 z-50">
+<!-- Brand Header -->
+<div class="mb-12 px-2">
+<h1 class="text-xl font-black text-indigo-900 dark:text-indigo-100 tracking-tighter">Global Finance</h1>
+<p class="text-xs font-medium text-slate-500 uppercase tracking-widest">Enterprise Portal</p>
+</div>
+<!-- Navigation Tabs -->
+<nav class="flex flex-col gap-y-1 mb-auto">
+<a class="flex items-center gap-3 py-3 px-4 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-manrope text-sm font-medium">Dashboard</span>
+</a>
+<!-- Active State: Worker Management -->
+<a class="flex items-center gap-3 py-3 px-4 text-indigo-900 dark:text-white bg-white dark:bg-indigo-900/20 rounded-full shadow-sm scale-105 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-manrope text-sm font-medium">Worker Management</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-manrope text-sm font-medium">Applications</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<span class="font-manrope text-sm font-medium">Schemes</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span class="font-manrope text-sm font-medium">Analytics</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-manrope text-sm font-medium">Settings</span>
+</a>
+</nav>
+<!-- CTA -->
+<button class="mb-8 w-full py-4 bg-gradient-to-br from-indigo-900 to-[#747cd3] text-white rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+            New Application
+        </button>
+<!-- Footer Tabs -->
+<div class="flex flex-col gap-y-1 pt-6 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 py-2 px-4 text-slate-500 hover:text-indigo-900 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+<span class="font-manrope text-sm font-medium">Support</span>
+</a>
+<a class="flex items-center gap-3 py-2 px-4 text-slate-500 hover:text-error transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-manrope text-sm font-medium">Sign Out</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-0 md:ml-72 min-h-screen pt-12 pb-24 px-8 lg:px-16 max-w-7xl">
+<!-- Hero Header -->
+<header class="mb-16">
+<span class="text-on-primary-container font-headline font-bold text-sm tracking-widest uppercase mb-4 block">Fleet Oversight</span>
+<h1 class="text-5xl font-headline font-extrabold text-on-surface mb-6 tracking-tight">Worker Management</h1>
+<p class="text-on-surface-variant text-xl leading-relaxed max-w-2xl">
+                Review operational efficiency across your global workforce. Manage scores, vetting status, and regional assignments in real-time.
+            </p>
+</header>
+<!-- Filter & Search Section -->
+<section class="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
+<!-- Search Bar -->
+<div class="lg:col-span-2 relative group">
+<div class="absolute inset-y-0 left-6 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</div>
+<input class="w-full h-16 pl-16 pr-6 bg-surface-container-low border-none rounded-md text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-on-primary-container/20 transition-all duration-300 shadow-sm" placeholder="Search by name, ID or location..." type="text"/>
+</div>
+<!-- Work Type Filter -->
+<div class="relative">
+<select class="w-full h-16 px-6 bg-surface-container-low border-none rounded-md text-on-surface appearance-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-on-primary-container/20 transition-all cursor-pointer">
+<option>All Work Types</option>
+<option>Logistics</option>
+<option>Manufacturing</option>
+<option>Engineering</option>
+<option>Quality Control</option>
+</select>
+<div class="absolute right-6 inset-y-0 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<!-- Score Range Filter -->
+<div class="relative">
+<select class="w-full h-16 px-6 bg-surface-container-low border-none rounded-md text-on-surface appearance-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-on-primary-container/20 transition-all cursor-pointer">
+<option>All Score Bands</option>
+<option>Exceptional (90+)</option>
+<option>Strong (80-89)</option>
+<option>Consistent (70-79)</option>
+<option>Needs Review (&lt;70)</option>
+</select>
+<div class="absolute right-6 inset-y-0 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+</div>
+</div>
+</section>
+<!-- Workers Data Layout (Editorial Table Style) -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_40px_40px_rgba(26,28,28,0.06)]">
+<!-- Table Header (No Borders, Tonal Shift) -->
+<div class="grid grid-cols-12 bg-surface-container-low px-8 py-6 text-on-surface-variant font-label text-xs font-bold tracking-widest uppercase">
+<div class="col-span-4">Worker Profile</div>
+<div class="col-span-2">Work Type</div>
+<div class="col-span-2 text-center">IWTS Score</div>
+<div class="col-span-2 text-center">Score Band</div>
+<div class="col-span-2 text-right">Status</div>
+</div>
+<!-- Table Body -->
+<div class="flex flex-col">
+<!-- Row 1 -->
+<div class="grid grid-cols-12 items-center px-8 py-8 hover:bg-surface-container transition-colors duration-300">
+<div class="col-span-4 flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover grayscale contrast-125" data-alt="professional portrait of a man in his late 30s with a warm smile and sharp corporate attire in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDii2ieW8rI0rnggDP7IuifdxOmKdIvkYQnrAAagkvVJtBeZeT9YYZjs4IS5kxrH2J8BoZIOlVLHO1hpDxAnljS-OhWjOKPQwIuquRg_UaseSUZzMTzssRxXKJnAKewYbkE9oe2oXkOwwdJWLh6EdxAuNIq0PSJ1XCK1_vM1V_z1N8p56D7o5OHFbMFrDen35USj6knus3iGr21vkFjUboFtYr61DD-3ZHlq2PtWg1PBV6wvvnRr-1bZzhBoQFiHaaaLx_szVqRgOEQ"/>
+<div>
+<p class="font-headline font-bold text-on-surface text-lg">Marcus Thornton</p>
+<p class="text-on-surface-variant text-sm">London, UK • ID: #W9822</p>
+</div>
+</div>
+<div class="col-span-2">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full text-xs font-bold">Engineering</span>
+</div>
+<div class="col-span-2 text-center font-headline font-bold text-xl text-on-surface">94</div>
+<div class="col-span-2 text-center">
+<span class="text-on-primary-container font-medium text-sm">Exceptional</span>
+</div>
+<div class="col-span-2 text-right">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full text-xs font-bold uppercase">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+                            Active
+                        </div>
+</div>
+</div>
+<!-- Row 2 (Tonal shift for separation) -->
+<div class="grid grid-cols-12 items-center px-8 py-8 bg-surface-container-low/30 hover:bg-surface-container transition-colors duration-300">
+<div class="col-span-4 flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover grayscale contrast-125" data-alt="confident professional woman with dark hair in business casual attire with bright natural morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHJS_c5XVAxvAHuxxkhTDKjOfk_zDsCy4kY27DM_M5QnCA8_x8rPvonl8IAxg2fcoFVrRMfkvm8rCdkF5dPsnov_Ed75o3vlEs8EKtvx1_1zoGSW2qzVqZQD-dD5TsoQzj674nF8-TC4UKbURSMnsgE0Nde4-mFiFNhlw5S3IckznaVhZLf5JWCg2H19lSoPzL-bk07W4v-gasBSt0Iuc8iNfpkFMVDebt0umRspwedpmdPZFlnhpZiHawPohqL-zYnfQkvZGWoSS1"/>
+<div>
+<p class="font-headline font-bold text-on-surface text-lg">Elena Rodriguez</p>
+<p class="text-on-surface-variant text-sm">Barcelona, ES • ID: #W8441</p>
+</div>
+</div>
+<div class="col-span-2">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full text-xs font-bold">Logistics</span>
+</div>
+<div class="col-span-2 text-center font-headline font-bold text-xl text-on-surface">88</div>
+<div class="col-span-2 text-center">
+<span class="text-on-primary-container font-medium text-sm">Strong</span>
+</div>
+<div class="col-span-2 text-right">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full text-xs font-bold uppercase">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+                            Active
+                        </div>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-12 items-center px-8 py-8 hover:bg-surface-container transition-colors duration-300">
+<div class="col-span-4 flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover grayscale contrast-125" data-alt="middle aged professional man with glasses and creative industrial setting in background with cool blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTu84Lkj_7l6MounTScsh8cQuUptzbTsBliyiP6KnTDQgmpVu00HRb15PUIJmo9nUoCDJUeY4l5RKbRcrKzzY0PTSADDxvJYOjab18cZoXNaLk9_cLCy61moGUBj4IkEgYu_FGxAWcYCtsKqdx7oTI5CXJgfOG5WqIUBmixMiztbfWDXajHq8r5OYDDCgx2EOUK5USptSBnDj3Y5xsfcS3r2vn1WhkJEMoH4gW3Ytkxn6yqnNYgNTAutG4T48_8ZiZOIf1N-3Zb8FM"/>
+<div>
+<p class="font-headline font-bold text-on-surface text-lg">Jonas Weber</p>
+<p class="text-on-surface-variant text-sm">Munich, DE • ID: #W4512</p>
+</div>
+</div>
+<div class="col-span-2">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full text-xs font-bold">Manufacturing</span>
+</div>
+<div class="col-span-2 text-center font-headline font-bold text-xl text-on-surface">72</div>
+<div class="col-span-2 text-center">
+<span class="text-on-primary-container font-medium text-sm">Consistent</span>
+</div>
+<div class="col-span-2 text-right">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 rounded-full text-xs font-bold uppercase">
+<span class="w-2 h-2 rounded-full bg-yellow-500"></span>
+                            Vetting
+                        </div>
+</div>
+</div>
+<!-- Row 4 -->
+<div class="grid grid-cols-12 items-center px-8 py-8 bg-surface-container-low/30 hover:bg-surface-container transition-colors duration-300">
+<div class="col-span-4 flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover grayscale contrast-125" data-alt="young professional woman with focused expression in a modern office environment with blurred city lights through window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGykD-6r6-UPXKKZADrMrZJmrtB6-ja1CqacgJtJ7vfX9JnE06spPh1vDfurgGpEwgp_qTL0KVebnF1Zj7JiBgG0Wq924UqP_Wjng2S4t1iJ-MIozDLF-i1MZt1EbMNMuNzlNbQOMAkxDPybqeko04_E-HVqv9t4iihSAsnxUyWGVeZAsr_jL-n8EPjbw0Q4jJJ9omZJTJsfXVgWUyfczXf7vhTi_l9_nozf1X0W-Whebct7J47dJsSqSjQrkS6fvxX8k_VKCI71Pe"/>
+<div>
+<p class="font-headline font-bold text-on-surface text-lg">Sarah Jenkins</p>
+<p class="text-on-surface-variant text-sm">Chicago, US • ID: #W1102</p>
+</div>
+</div>
+<div class="col-span-2">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full text-xs font-bold">Quality Control</span>
+</div>
+<div class="col-span-2 text-center font-headline font-bold text-xl text-on-surface">64</div>
+<div class="col-span-2 text-center">
+<span class="text-error font-medium text-sm">Needs Review</span>
+</div>
+<div class="col-span-2 text-right">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-error-container text-on-error-container rounded-full text-xs font-bold uppercase">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                            On Hold
+                        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More (Asymmetric Editorial Style) -->
+<div class="mt-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div class="flex items-center gap-4">
+<button class="w-12 h-12 rounded-full flex items-center justify-center bg-surface-container-low text-on-surface hover:bg-on-primary-container hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<div class="flex gap-2 font-headline font-bold">
+<span class="w-10 h-10 flex items-center justify-center bg-on-primary-container text-white rounded-full">1</span>
+<span class="w-10 h-10 flex items-center justify-center hover:bg-surface-container-low rounded-full cursor-pointer">2</span>
+<span class="w-10 h-10 flex items-center justify-center hover:bg-surface-container-low rounded-full cursor-pointer">3</span>
+<span class="w-10 h-10 flex items-center justify-center">...</span>
+<span class="w-10 h-10 flex items-center justify-center hover:bg-surface-container-low rounded-full cursor-pointer">12</span>
+</div>
+<button class="w-12 h-12 rounded-full flex items-center justify-center bg-surface-container-low text-on-surface hover:bg-on-primary-container hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="max-w-xs text-right">
+<p class="text-on-surface-variant font-label text-sm italic">
+                    Showing 1-10 of 124 curated workforce profiles based on current resilience metrics.
+                </p>
+</div>
+</div>
+<!-- Insight Card (Asymmetric Bento Element) -->
+<div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="md:col-span-2 bg-gradient-to-br from-on-primary-fixed to-on-primary-container p-12 rounded-xl text-white relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-3xl font-headline font-extrabold mb-4">Integrity Scoring Live</h3>
+<p class="text-indigo-100 text-lg mb-8 max-w-md">Our resilience algorithm has been updated for Q3. Ensure all workers in the "Needs Review" band are scheduled for interview by Friday.</p>
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:scale-105 transition-transform">
+                        Run Global Audit
+                        <span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+</button>
+</div>
+<!-- Abstract Decorative Element -->
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-lg flex flex-col justify-center">
+<span class="material-symbols-outlined text-on-primary-container text-4xl mb-6" data-icon="trending_up">trending_up</span>
+<p class="text-4xl font-headline font-extrabold text-on-surface mb-2">82%</p>
+<p class="text-on-surface-variant text-sm font-label uppercase tracking-widest">Average Fleet Score</p>
+<div class="mt-6 w-full bg-surface-container-high h-1 rounded-full overflow-hidden">
+<div class="bg-on-primary-container h-full w-[82%]"></div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
