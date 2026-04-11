@@ -16,7 +16,7 @@ export default function Header({ variant = 'protected' }) {
   return (
     <header className="bg-surface/80 backdrop-blur-xl sticky top-0 z-50 transition-colors duration-300 border-b border-surface-container w-full">
       <nav className="flex justify-between items-center px-8 py-6 w-full max-w-7xl mx-auto">
-        <Link to={isProtected || token ? "/dashboard" : "/"} className="text-2xl font-bold tracking-tighter text-indigo-950 font-headline">
+        <Link to={isProtected || token ? "/" : "/"} className="text-2xl font-bold tracking-tighter text-indigo-950 font-headline">
           Invisible India
         </Link>
 
