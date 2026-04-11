@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Editorial Resilience - Partner Dashboard</title>
+<!-- Google Fonts: Manrope & Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#ffb4a8",
+                    "on-tertiary-fixed": "#410000",
+                    "on-background": "#1a1c1c",
+                    "surface": "#f9f9f9",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#7d2b21",
+                    "surface-variant": "#e2e2e2",
+                    "on-primary-fixed": "#010766",
+                    "on-error-container": "#93000a",
+                    "secondary": "#785a00",
+                    "outline": "#767683",
+                    "on-tertiary-container": "#cb6657",
+                    "primary-fixed": "#e0e0ff",
+                    "on-secondary-fixed": "#251a00",
+                    "primary-container": "#010766",
+                    "inverse-surface": "#2f3131",
+                    "primary": "#000000",
+                    "error": "#ba1a1a",
+                    "on-surface": "#1a1c1c",
+                    "on-surface-variant": "#464651",
+                    "inverse-primary": "#bdc2ff",
+                    "background": "#f9f9f9",
+                    "tertiary": "#000000",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "tertiary-container": "#410000",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary-container": "#fdc002",
+                    "surface-container": "#eeeeee",
+                    "secondary-fixed-dim": "#f9bd00",
+                    "on-secondary-container": "#6c5000",
+                    "primary-fixed-dim": "#bdc2ff",
+                    "surface-dim": "#dadada",
+                    "on-primary-container": "#747cd3",
+                    "tertiary-fixed": "#ffdad4",
+                    "surface-tint": "#4e56ab",
+                    "secondary-fixed": "#ffdf9d",
+                    "on-secondary-fixed-variant": "#5b4300",
+                    "surface-bright": "#f9f9f9",
+                    "on-primary-fixed-variant": "#353e91",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#c6c5d3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #000666 0%, #747cd3 100%);
+        }
+        .soft-shadow {
+            box-shadow: 0 40px 40px rgba(26, 28, 28, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen">
+<!-- SideNavBar (Execution from JSON) -->
+<aside class="hidden md:flex h-screen w-72 flex-col fixed left-0 top-0 bg-slate-50 dark:bg-slate-950 py-8 px-6 gap-y-2 z-40">
+<div class="mb-10 px-2">
+<h1 class="text-xl font-black text-indigo-900 dark:text-indigo-100 font-headline">Global Finance</h1>
+<p class="text-xs font-medium text-slate-500 uppercase tracking-widest">Enterprise Portal</p>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Active: Dashboard -->
+<a class="flex items-center gap-3 px-4 py-3 text-indigo-900 dark:text-white bg-white dark:bg-indigo-900/20 rounded-full shadow-sm transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-manrope text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-manrope text-sm font-medium">Worker Management</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-manrope text-sm font-medium">Applications</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<span class="font-manrope text-sm font-medium">Schemes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span class="font-manrope text-sm font-medium">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-manrope text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="mt-auto space-y-4 pt-6 border-t border-slate-200/50">
+<button class="w-full signature-gradient text-white py-4 rounded-full font-headline font-bold text-sm shadow-lg hover:scale-105 transition-transform duration-200">
+                New Application
+            </button>
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-slate-600 hover:text-indigo-900 text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+                    Support
+                </a>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-600 hover:text-error text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                    Sign Out
+                </a>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="md:ml-72 min-h-screen">
+<!-- TopAppBar (Execution from JSON) -->
+<header class="flex justify-between items-center w-full px-8 h-20 sticky top-0 z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl no-border shadow-[0_40px_40px_rgba(26,28,28,0.06)]">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tighter text-indigo-900 dark:text-indigo-100 font-headline">Editorial Resilience</span>
+<!-- Search Bar (on_left per JSON) -->
+<div class="relative group hidden lg:block">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="pl-12 pr-6 py-2.5 bg-surface-container-low border-none rounded-full w-80 text-sm focus:ring-2 focus:ring-on-primary-container transition-all" placeholder="Search resilience data..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-2">
+<button class="p-2.5 rounded-full text-slate-500 hover:bg-slate-200/50 transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2.5 rounded-full text-slate-500 hover:bg-slate-200/50 transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<button class="p-2.5 rounded-full text-slate-500 hover:bg-slate-200/50 transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="apps">apps</span>
+</button>
+</div>
+<div class="h-10 w-10 rounded-full overflow-hidden border-2 border-white soft-shadow">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional male executive with a warm smile, wearing a charcoal suit in a bright corporate office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-c1HNMJSNsyRhJaHduI7t5qt5rxvkLiJ4QJWkLe3jnoPpYTB0O5iWj7F4QcDE_bZo8EUAVTt8SLysjO4Dn2RAtbR490Qnw1KDg72L_KXcyaAwVy0QbRXy50yKh0irpDZluem8-eO0V3KUGocO481Y_a8qE2vGSGmaIiUHZsLRPfLNvbPrsEzD0ZrDdx4AqPS09cFtAAkOuvBhs1rKWRCkNAwvgjELLS-TB-b9wb2fZiuvSra7gQztTvsbFD4aRWlUlRRIxaTDGZJI"/>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="p-8 max-w-[1600px] mx-auto">
+<!-- Hero Header Section -->
+<div class="mb-12">
+<h2 class="text-5xl font-headline font-extrabold text-indigo-900 tracking-tight mb-2">Performance Landscape</h2>
+<p class="text-lg text-slate-500 font-body max-w-2xl leading-relaxed">
+                    Visualizing your resilience infrastructure and worker onboarding metrics for the current fiscal period.
+                </p>
+</div>
+<!-- Metric Cards (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+<div class="bg-surface-container-lowest p-8 rounded-xl soft-shadow flex flex-col justify-between h-48 border-l-4 border-indigo-600 transition-transform hover:scale-[1.02] duration-300">
+<span class="text-slate-400 font-label font-medium uppercase tracking-widest text-xs">Total Workers</span>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-headline font-bold text-on-surface">12,482</span>
+<span class="text-emerald-600 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+                            12%
+                        </span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl soft-shadow flex flex-col justify-between h-48 border-l-4 border-amber-500 transition-transform hover:scale-[1.02] duration-300">
+<span class="text-slate-400 font-label font-medium uppercase tracking-widest text-xs">Avg IWTS Score</span>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-headline font-bold text-on-surface">84.2</span>
+<span class="text-slate-400 text-sm font-medium">/ 100</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl soft-shadow flex flex-col justify-between h-48 border-l-4 border-indigo-200 transition-transform hover:scale-[1.02] duration-300">
+<span class="text-slate-400 font-label font-medium uppercase tracking-widest text-xs">Applications</span>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-headline font-bold text-on-surface">894</span>
+<span class="text-on-surface-variant text-sm font-medium">New</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl soft-shadow flex flex-col justify-between h-48 border-l-4 border-emerald-500 transition-transform hover:scale-[1.02] duration-300">
+<span class="text-slate-400 font-label font-medium uppercase tracking-widest text-xs">Approval Rate</span>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-headline font-bold text-on-surface">94%</span>
+<span class="material-symbols-outlined text-emerald-500" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+</div>
+<!-- Asymmetric Grid Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Score Distribution (Visual Chart Area) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-10 soft-shadow overflow-hidden relative min-h-[500px]">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h3 class="text-2xl font-headline font-bold text-indigo-900 mb-1">Score Distribution</h3>
+<p class="text-slate-500 text-sm">Resilience metrics across all departments</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container-low rounded-full text-xs font-bold text-indigo-900">Current Month</span>
+</div>
+</div>
+<!-- Simplified Visual Representation of a Chart -->
+<div class="flex items-end justify-between h-64 gap-4 px-4">
+<div class="w-full flex flex-col items-center gap-4">
+<div class="w-full bg-slate-100 rounded-full relative overflow-hidden h-48">
+<div class="absolute bottom-0 w-full bg-slate-400 rounded-full h-[30%]"></div>
+</div>
+<span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Low</span>
+</div>
+<div class="w-full flex flex-col items-center gap-4">
+<div class="w-full bg-slate-100 rounded-full relative overflow-hidden h-48">
+<div class="absolute bottom-0 w-full signature-gradient rounded-full h-[85%]"></div>
+</div>
+<span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Medium</span>
+</div>
+<div class="w-full flex flex-col items-center gap-4">
+<div class="w-full bg-slate-100 rounded-full relative overflow-hidden h-48">
+<div class="absolute bottom-0 w-full bg-secondary-container rounded-full h-[65%]"></div>
+</div>
+<span class="text-xs font-bold text-slate-500 uppercase tracking-widest">High</span>
+</div>
+</div>
+<div class="mt-12 p-6 bg-surface-container-low rounded-lg flex items-center gap-6">
+<div class="h-12 w-12 rounded-full signature-gradient flex items-center justify-center text-white">
+<span class="material-symbols-outlined">info</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+<strong class="text-indigo-900">Insight:</strong> Medium-score workers have increased by <span class="font-bold">14%</span> since the last audit. Re-evaluation recommended for high-priority schemes.
+                        </p>
+</div>
+</div>
+<!-- Recent Activity Feed -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<div class="bg-surface-container-lowest rounded-xl p-8 soft-shadow">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-xl font-headline font-bold text-indigo-900">Recent Applications</h3>
+<button class="text-xs font-bold text-indigo-600 hover:underline uppercase tracking-widest">View All</button>
+</div>
+<div class="space-y-6">
+<!-- Application Item -->
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="h-12 w-12 rounded-full overflow-hidden bg-slate-200">
+<img alt="Applicant" class="w-full h-full object-cover" data-alt="Professional headshot of a smiling young woman with dark hair, studio lighting, clean gray background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1GFILIsFfPmy5aebrhkvmWoUHwVkp1Lo0oFLaDdQ-VrUEueMI0skkomkrUr7qB5MqfeWKx0VehAVzMGWi5GYhpyT926FMUg_s51OtK7-r6yuTWHMj22xQU8G9O0bhJJW2XCRLckZ_XT6xOC5ZCo5PEQQN2I4BK5usGDV36QqDX6nKVd-tIbfNS8XQIzNdPJvj1v3TXV-8PSrbt97FengGiuHvBXpBf6VZq2zgdRQeXAAcCBcY-rS1Fo14pyXfNKqDsF7JWaVZ9yak"/>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-on-surface text-sm">Elena Rodriguez</h4>
+<p class="text-xs text-slate-500">Logistics Coordinator • 2h ago</p>
+</div>
+<span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-[10px] font-bold uppercase tracking-wider">Pending</span>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="h-12 w-12 rounded-full overflow-hidden bg-slate-200">
+<img alt="Applicant" class="w-full h-full object-cover" data-alt="Close-up of a middle-aged man with glasses and a friendly expression, soft office lighting, modern blur background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRCthVQkrZpaG7tlrG43qzSJF6QzijTzOBErnALh92P29JgvgGtf3rWLcGT7DkSPeyF525_zOVzWxcaQ9ayhda11V6UDvN2MW9Xh2-kb52gEh0gMeKFTivUxR3qqqiw-Hcc6gFf5cZ5qwFlsFL7gREeiSh6hDq78OMVXtWD1UmnC_jlMKaTT1vP5FYdEmPnb_3EECJAdSl-ZStahxAqaEuEByvgVLNBl437XlzkBP4tQkJ26wF60U-VdM3BJgDyy7lfAkp_-v1QxPD"/>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-on-surface text-sm">Marcus Chen</h4>
+<p class="text-xs text-slate-500">Systems Architect • 5h ago</p>
+</div>
+<span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-[10px] font-bold uppercase tracking-wider">Reviewing</span>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="h-12 w-12 rounded-full overflow-hidden bg-slate-200">
+<img alt="Applicant" class="w-full h-full object-cover" data-alt="Confident young man looking at camera, natural outdoor lighting with soft city bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA19GZ52X6MBP-s4IQINLYI9LPCBsoZ9tQQrPOvie0bNQiJ3Kx4afF8OMUOqejzW08K2ECXDU9TP_49YuC6DtPyEi-_tmgjq1Mrx-OB58u6rKr4hCoIFp75WNKsxd_23PGCE4RxpWZ8eAz89mUmAdYQ_RlgGvcWweBwdU4EKdHaZdQg9CfrhJ7ZnvNqCYjSqF40uDBHR_hlK5CwvpliOuLab6A2FEuQfnZ0XtF4tukeTFY8_L_Tv4c0cA6liYT7nq_bWCOIGECxUEuv"/>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-on-surface text-sm">Jordan Smith</h4>
+<p class="text-xs text-slate-500">Field Operations • Yesterday</p>
+</div>
+<span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-[10px] font-bold uppercase tracking-wider">Pending</span>
+</div>
+</div>
+</div>
+<!-- Scheme Summary Card -->
+<div class="signature-gradient rounded-xl p-10 text-white soft-shadow relative overflow-hidden group">
+<!-- Decorative Abstract Shape -->
+<div class="absolute -right-10 -top-10 h-40 w-40 bg-white/10 rounded-full blur-3xl transition-transform group-hover:scale-150 duration-700"></div>
+<div class="relative z-10">
+<span class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-200 block mb-2">Active Scheme</span>
+<h3 class="text-3xl font-headline font-extrabold mb-6">Metropolitan Resilience Grant</h3>
+<div class="flex items-center gap-4 mb-8">
+<div class="h-1 w-full bg-white/20 rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container w-[72%]"></div>
+</div>
+<span class="text-sm font-bold">72%</span>
+</div>
+<button class="bg-white text-indigo-900 px-8 py-3 rounded-full text-sm font-bold shadow-lg hover:bg-slate-100 transition-colors">
+                                View Details
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Floating Action Button (Only on Mobile-ish) -->
+<button class="fixed bottom-8 right-8 h-16 w-16 signature-gradient text-white rounded-full flex items-center justify-center soft-shadow md:hidden z-50">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</main>
+<!-- Mobile Bottom NavBar (Visible only on small screens) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-slate-50/95 backdrop-blur-md h-20 flex justify-around items-center px-4 z-50 border-t border-slate-200">
+<a class="flex flex-col items-center gap-1 text-indigo-900" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Dash</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Team</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Apps</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Sets</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Application Management | Editorial Resilience</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "on-tertiary-fixed": "#410000",
+                        "on-background": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#7d2b21",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-fixed": "#010766",
+                        "on-error-container": "#93000a",
+                        "secondary": "#785a00",
+                        "outline": "#767683",
+                        "on-tertiary-container": "#cb6657",
+                        "primary-fixed": "#e0e0ff",
+                        "on-secondary-fixed": "#251a00",
+                        "primary-container": "#010766",
+                        "inverse-surface": "#2f3131",
+                        "primary": "#000000",
+                        "error": "#ba1a1a",
+                        "on-surface": "#1a1c1c",
+                        "on-surface-variant": "#464651",
+                        "inverse-primary": "#bdc2ff",
+                        "background": "#f9f9f9",
+                        "tertiary": "#000000",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "tertiary-container": "#410000",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-container": "#fdc002",
+                        "surface-container": "#eeeeee",
+                        "secondary-fixed-dim": "#f9bd00",
+                        "on-secondary-container": "#6c5000",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "surface-dim": "#dadada",
+                        "on-primary-container": "#747cd3",
+                        "tertiary-fixed": "#ffdad4",
+                        "surface-tint": "#4e56ab",
+                        "secondary-fixed": "#ffdf9d",
+                        "on-secondary-fixed-variant": "#5b4300",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary-fixed-variant": "#353e91",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c6c5d3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #000666 0%, #747cd3 100%);
+        }
+        .glass-nav {
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen">
+<aside class="hidden md:flex h-screen w-72 flex-col fixed left-0 top-0 bg-slate-50 dark:bg-slate-950 py-8 px-6 gap-y-2 z-40">
+<div class="mb-12 px-2">
+<h1 class="text-xl font-black text-indigo-900 dark:text-indigo-100 font-headline">Global Finance</h1>
+<p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Enterprise Portal</p>
+</div>
+<nav class="flex flex-col gap-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 rounded-full font-label text-sm font-medium group" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 rounded-full font-label text-sm font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Worker Management</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-indigo-900 dark:text-white bg-white dark:bg-indigo-900/20 rounded-full shadow-sm font-label text-sm font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span>Applications</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 rounded-full font-label text-sm font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<span>Schemes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 rounded-full font-label text-sm font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span>Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 rounded-full font-label text-sm font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-y-1">
+<button class="mb-6 signature-gradient text-white rounded-full py-4 font-headline font-bold text-sm shadow-lg hover:scale-105 transition-transform duration-200">
+                New Application
+            </button>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 rounded-full font-label text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-indigo-900 dark:hover:text-indigo-300 rounded-full font-label text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Sign Out</span>
+</a>
+</div>
+</aside>
+<main class="md:ml-72 min-h-screen">
+<header class="flex justify-between items-center w-full px-8 h-20 sticky top-0 z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_40px_40px_rgba(26,28,28,0.06)]">
+<div class="flex items-center gap-4">
+<div class="md:hidden">
+<span class="material-symbols-outlined text-indigo-900" data-icon="menu">menu</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-slate-400" data-icon="search">search</span>
+<input class="pl-12 pr-6 py-2.5 bg-surface-container-low border-none rounded-full w-64 focus:ring-2 focus:ring-on-primary-container focus:bg-surface-container-lowest transition-all duration-300 font-label text-sm" placeholder="Search applications..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-200/50 rounded-full transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-200/50 rounded-full transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+</div>
+<div class="h-10 w-10 rounded-full bg-slate-200 overflow-hidden">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional male manager in a bright office setting with neutral lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyu2jNdw0VpHn3mgpdOpEaLUZOxY0EIvMF_4b3LfKbnGUW8CG-G_wxB3YLnL0a0ntNKPP1gCB0AV62hPK5dkhWvljg0hkkwOqoDQ7Pjp3PrF1Jsk1ELlpUf8jscIXMPXk8hiQZSOwlMA4Um1UMSqjHCsX1iravUKi84OwJAFqev_Q-JC7Yb_j5iVs5EUV8rfTASvg0JU5VpGMw2ksMRt2qdAf1Vmmc9oIRJF2mJaLzUK_2BqrpQdpLQjFp-9G4KODrwfYMBxW1LH-J"/>
+</div>
+</div>
+</header>
+<section class="p-8 md:p-12 max-w-7xl mx-auto">
+<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-2">
+<p class="text-on-primary-container font-headline font-bold uppercase tracking-widest text-xs">Management Console</p>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-indigo-950 tracking-tight">Active Applications</h2>
+</div>
+<div class="flex gap-4">
+<div class="flex bg-surface-container-low p-1 rounded-full">
+<button class="px-6 py-2 bg-white rounded-full shadow-sm font-label text-sm font-bold text-indigo-900">All</button>
+<button class="px-6 py-2 rounded-full font-label text-sm font-medium text-slate-500 hover:text-indigo-900 transition-colors">Pending</button>
+<button class="px-6 py-2 rounded-full font-label text-sm font-medium text-slate-500 hover:text-indigo-900 transition-colors">Archived</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-12 space-y-4">
+<div class="grid grid-cols-12 px-10 py-4 font-headline text-[10px] font-bold uppercase tracking-widest text-slate-400">
+<div class="col-span-4">Worker Detail</div>
+<div class="col-span-3">Scheme Name</div>
+<div class="col-span-2">Status</div>
+<div class="col-span-2 text-right">Submission Date</div>
+<div class="col-span-1"></div>
+</div>
+<div class="group bg-surface-container-lowest rounded-lg p-6 md:px-10 md:py-8 flex flex-col md:grid md:grid-cols-12 items-center gap-6 transition-all duration-300 hover:shadow-[0_40px_40px_rgba(26,28,28,0.06)] hover:-translate-y-1 relative overflow-hidden">
+<div class="col-span-4 flex items-center gap-6 w-full">
+<div class="h-16 w-16 rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Worker photo" class="w-full h-full object-cover" data-alt="Professional woman in a creative workspace with natural light, wearing a beige sweater and looking confidently into the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT2siZYCxaeeP9vDxkEAXwUqmWUH4BBe1MhzSpP0q887wJAE8jCjVFEBFeLdOj0FJj9XhU_1djqZxrfiHaNWz7fzOwHJmQRv7ZOvUJ2N365hPCP5mwPVyqgVhinNZLwB_sbrYHbZ2cVrPkvlLHlLOsZJssnZ2AC9iZHcIV4tfSb0XsEj8Flgje8IJ3nCnVeo3iM8EN11Lk0n2T7BWhdn-_AZP8nEkbPVCJ59oo6Qv7zObOWbcOchNBKXoWLNaH6Arl1lfGIHSjsGFN"/>
+</div>
+<div>
+<h4 class="font-headline font-bold text-xl text-indigo-950">Sarah Jenkins</h4>
+<p class="text-sm text-slate-500">sarah.j@enterprise.com</p>
+</div>
+</div>
+<div class="col-span-3 w-full">
+<span class="inline-flex items-center px-4 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-bold font-label">
+                                Resilience Grant 2024
+                            </span>
+</div>
+<div class="col-span-2 w-full">
+<div class="flex items-center gap-2 text-amber-600">
+<span class="h-2 w-2 rounded-full bg-amber-500"></span>
+<span class="font-bold text-sm">Pending Review</span>
+</div>
+</div>
+<div class="col-span-2 text-right w-full">
+<p class="font-body text-sm font-medium text-slate-600">Oct 24, 2023</p>
+</div>
+<div class="col-span-1 flex justify-end gap-3 w-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="h-10 w-10 flex items-center justify-center bg-surface-container rounded-full text-indigo-900 hover:bg-secondary-container hover:text-on-secondary-container transition-all">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<div class="group bg-surface-container-lowest rounded-lg p-6 md:px-10 md:py-8 flex flex-col md:grid md:grid-cols-12 items-center gap-6 transition-all duration-300 hover:shadow-[0_40px_40px_rgba(26,28,28,0.06)] hover:-translate-y-1">
+<div class="col-span-4 flex items-center gap-6 w-full">
+<div class="h-16 w-16 rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Worker photo" class="w-full h-full object-cover" data-alt="Portrait of a middle-aged man with a thoughtful expression in a contemporary office environment with soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsccG-qH4BBphUjdeDv3n9UgsecVk9JZd99hUKa-qKH4HglPypsU5e0u3zD3l0gyZtzbjei28Zqi4JZD_5MtsLeHG8keDp_i-t6FO8VQED0bt0GInePC7GU6sp-BgSfxt4tIaxcM59w-kd7K30kkiFI5StTSvxhvmA4lpWk3QoxmG2V0XVU3VKTEvdIh4MIVh7pw10dZsjWzV5xBRTXFh5_o_LzqS4kKWaWi9vUr_7GVTBvn8wn7xQS5nWYR9ZFT5cUW3L8N_YXbq2"/>
+</div>
+<div>
+<h4 class="font-headline font-bold text-xl text-indigo-950">Michael Chen</h4>
+<p class="text-sm text-slate-500">m.chen@techglobal.com</p>
+</div>
+</div>
+<div class="col-span-3 w-full">
+<span class="inline-flex items-center px-4 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold font-label">
+                                Health &amp; Safety Fund
+                            </span>
+</div>
+<div class="col-span-2 w-full">
+<div class="flex items-center gap-2 text-emerald-600">
+<span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+<span class="font-bold text-sm">Approved</span>
+</div>
+</div>
+<div class="col-span-2 text-right w-full">
+<p class="font-body text-sm font-medium text-slate-600">Oct 22, 2023</p>
+</div>
+<div class="col-span-1 flex justify-end gap-3 w-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="h-10 w-10 flex items-center justify-center bg-surface-container rounded-full text-indigo-900 hover:bg-secondary-container transition-all">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<div class="group bg-surface-container-lowest rounded-lg p-6 md:px-10 md:py-8 flex flex-col md:grid md:grid-cols-12 items-center gap-6 transition-all duration-300 hover:shadow-[0_40px_40px_rgba(26,28,28,0.06)] hover:-translate-y-1">
+<div class="col-span-4 flex items-center gap-6 w-full">
+<div class="h-16 w-16 rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Worker photo" class="w-full h-full object-cover" data-alt="Candid portrait of a young professional woman laughing in a bright, modern studio with warm natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMiRoZL3PhNZ2A1a2Cx3vCYZpfVhcDGWt0RrIMCIBZYRPn5JF1Au8w5hCIXCR67W-lRYpoXNS8-nqGnqXHVGkWvrqupu5ma4Vc85-Ea2kg6A7iFQxp-6kCgsyrqWScHmJGW78BaV0n22Tz1UYSYKqJVdGb72f4oFH5ashPTHKwCgtXvJn4EutBFzsBy6qOtcGGpNxWIIUeKITHxM6XKO-OlnzGDhJ6Vvtv76K2q8z-Fgzeo1HUXdQ9yiky1SEjZ67UKyjbK3f9Ls9U"/>
+</div>
+<div>
+<h4 class="font-headline font-bold text-xl text-indigo-950">Aisha Rahmani</h4>
+<p class="text-sm text-slate-500">arahmani@designgroup.io</p>
+</div>
+</div>
+<div class="col-span-3 w-full">
+<span class="inline-flex items-center px-4 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-bold font-label">
+                                Editorial Resilience
+                            </span>
+</div>
+<div class="col-span-2 w-full">
+<div class="flex items-center gap-2 text-rose-600">
+<span class="h-2 w-2 rounded-full bg-rose-500"></span>
+<span class="font-bold text-sm">Rejected</span>
+</div>
+</div>
+<div class="col-span-2 text-right w-full">
+<p class="font-body text-sm font-medium text-slate-600">Oct 20, 2023</p>
+</div>
+<div class="col-span-1 flex justify-end gap-3 w-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="h-10 w-10 flex items-center justify-center bg-surface-container rounded-full text-indigo-900 hover:bg-secondary-container transition-all">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<div class="group bg-surface-container-lowest border-2 border-dashed border-indigo-100 rounded-lg p-10 flex flex-col items-center justify-center gap-4 text-center cursor-pointer hover:border-indigo-300 transition-all duration-300">
+<div class="h-12 w-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</div>
+<div>
+<p class="font-headline font-bold text-indigo-950">Manual Submission</p>
+<p class="text-xs text-slate-500">Add an application record manually for processing</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-12 mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-indigo-950 text-white p-8 rounded-xl shadow-xl relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-indigo-300 font-headline font-bold uppercase tracking-widest text-[10px] mb-4">Quick Action</p>
+<h3 class="text-2xl font-headline font-bold mb-6">Review Pending Queue</h3>
+<button class="bg-secondary-container text-on-secondary-container px-8 py-3 rounded-full font-headline font-bold text-sm shadow-lg hover:scale-105 transition-transform">Start Now</button>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]" data-icon="assignment_turned_in">assignment_turned_in</span>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-[0_40px_40px_rgba(26,28,28,0.06)] flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<div class="h-12 w-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</div>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Reports</span>
+</div>
+<h3 class="text-xl font-headline font-bold text-indigo-950 mb-2">Export Summary</h3>
+<p class="text-sm text-slate-500">Download the last 30 days of application activities in PDF format.</p>
+</div>
+<button class="mt-8 text-indigo-600 font-headline font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all">
+                            Generate Report <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-[0_40px_40px_rgba(26,28,28,0.06)] flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<div class="h-12 w-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Communications</span>
+</div>
+<h3 class="text-xl font-headline font-bold text-indigo-950 mb-2">Bulk Messaging</h3>
+<p class="text-sm text-slate-500">Notify selected applicants about status updates via email or SMS.</p>
+</div>
+<button class="mt-8 text-indigo-600 font-headline font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all">
+                            Send Notifications <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<footer class="p-8 mt-12 text-center text-slate-400 font-label text-xs">
+            © 2024 Editorial Resilience. All institutional data is encrypted and secure.
+        </footer>
+</main>
+<div class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white/80 backdrop-blur-xl border-t border-slate-100 flex items-center justify-around z-50">
+<button class="flex flex-col items-center justify-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] font-bold">HOME</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-indigo-900">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="text-[10px] font-bold">APPS</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="text-[10px] font-bold">STAFF</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] font-bold">SET</span>
+</button>
+</div>
+</body></html>

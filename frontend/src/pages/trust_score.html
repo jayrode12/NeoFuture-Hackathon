@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Invisible India - Trust Score</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#4e56ab",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1a1c1c",
+                        "secondary-fixed": "#ffdf9d",
+                        "on-tertiary-container": "#cb6657",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#f9bd00",
+                        "on-secondary-fixed": "#251a00",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#eeeeee",
+                        "background": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "secondary": "#785a00",
+                        "surface-container-low": "#f3f3f3",
+                        "on-primary-container": "#747cd3",
+                        "outline": "#767683",
+                        "primary-container": "#010766",
+                        "outline-variant": "#c6c5d3",
+                        "primary": "#000000",
+                        "secondary-container": "#fdc002",
+                        "on-secondary-container": "#6c5000",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#010766",
+                        "on-primary-fixed-variant": "#353e91",
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .trust-gauge {
+            background: conic-gradient(from 180deg, #fdc002 82%, #eeeeee 0deg);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Top Navigation Shell -->
+<nav class="bg-surface/80 backdrop-blur-xl docked full-width top-0 sticky z-50 transition-colors duration-300">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-7xl mx-auto">
+<span class="text-2xl font-bold tracking-tighter text-indigo-950">Invisible India</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 font-medium hover:text-indigo-700 transition-colors duration-300" href="#">Schemes</a>
+<a class="text-slate-500 font-medium hover:text-indigo-700 transition-colors duration-300" href="#">About Us</a>
+<a class="text-slate-500 font-medium hover:text-indigo-700 transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-indigo-950 font-manrope font-bold tracking-tight">Hindi/English</span>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-indigo-950 font-bold hover:bg-surface-container transition-all">Login</button>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-12 md:py-24">
+<!-- Hero Section: Trust Score Gauge -->
+<section class="flex flex-col md:flex-row items-center gap-16 mb-24">
+<div class="w-full md:w-1/2 flex justify-center">
+<div class="relative w-80 h-80 rounded-full flex items-center justify-center shadow-2xl p-4 bg-surface-container-lowest">
+<!-- Gauge Outer Ring -->
+<div class="trust-gauge absolute inset-0 rounded-full opacity-20"></div>
+<!-- Central Score Display -->
+<div class="relative bg-surface-container-lowest w-64 h-64 rounded-full flex flex-col items-center justify-center shadow-inner">
+<span class="font-headline text-8xl font-extrabold text-primary-container tracking-tighter">82</span>
+<span class="font-headline font-bold text-secondary text-2xl tracking-widest mt-[-0.5rem]">HIGH</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 text-left space-y-6">
+<div class="space-y-2">
+<span class="inline-block py-1 px-4 bg-secondary-container text-on-secondary-container font-label text-xs font-bold rounded-full">IDENTITY VERIFIED</span>
+<h1 class="font-headline text-5xl md:text-6xl font-bold text-on-background tracking-tight">Ramesh Kumar</h1>
+</div>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-lg">
+                    Your Trust Score is a dynamic reflection of your professional reliability and verified history. High scores unlock priority access to government schemes and premium job listings.
+                </p>
+<div class="pt-4">
+<button class="bg-gradient-to-br from-primary-container to-on-primary-container text-on-primary font-headline font-bold py-5 px-10 rounded-xl shadow-xl hover:scale-105 transition-transform">
+                        Share Verified Profile
+                    </button>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Breakdown & Explanation -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-24">
+<!-- Score Breakdown -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-10 md:p-14 rounded-xl shadow-sm">
+<h3 class="font-headline text-3xl font-bold mb-10 text-primary-container">Breakdown</h3>
+<div class="space-y-10">
+<!-- Item: UPI History -->
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-indigo-600">payments</span>
+<span class="font-bold text-on-surface">UPI Transactions</span>
+</div>
+<span class="font-mono font-bold text-on-surface-variant">94/100</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[94%]"></div>
+</div>
+</div>
+<!-- Item: Location Stability -->
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-indigo-600">location_on</span>
+<span class="font-bold text-on-surface">Location History</span>
+</div>
+<span class="font-mono font-bold text-on-surface-variant">78/100</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[78%]"></div>
+</div>
+</div>
+<!-- Item: Peer Recommendations -->
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-indigo-600">group</span>
+<span class="font-bold text-on-surface">Peer Endorsements</span>
+</div>
+<span class="font-mono font-bold text-on-surface-variant">88/100</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[88%]"></div>
+</div>
+</div>
+<!-- Item: Employer Rating -->
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-indigo-600">star</span>
+<span class="font-bold text-on-surface">Employer Rating</span>
+</div>
+<span class="font-mono font-bold text-on-surface-variant">65/100</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[65%]"></div>
+</div>
+</div>
+<!-- Item: Work Duration -->
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-indigo-600">schedule</span>
+<span class="font-bold text-on-surface">Work Consistency</span>
+</div>
+<span class="font-mono font-bold text-on-surface-variant">90/100</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[90%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Explanation Card -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<div class="bg-primary-container text-white p-10 md:p-14 rounded-xl flex-1 flex flex-col justify-center">
+<h3 class="font-headline text-3xl font-bold mb-6">Why this score?</h3>
+<p class="text-indigo-100 text-lg leading-relaxed mb-8">
+                        Invisible India uses a proprietary algorithm that analyzes your work consistency, digital payment footprint, and peer network. Unlike traditional credit scores, this measures your **professional resilience** and value as a skilled informal worker.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-indigo-50">Work history builds digital proof of income.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-indigo-50">Positive ratings from 4 past employers.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-indigo-50">Consistent location verification for 6 months.</span>
+</li>
+</ul>
+</div>
+<!-- Secondary Context Card -->
+<div class="bg-surface-container-low p-8 rounded-xl flex items-center gap-6">
+<div class="bg-white p-4 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-4xl text-indigo-900">verified_user</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Blockchain Secured</h4>
+<p class="text-sm text-on-surface-variant">Your score is cryptographically signed and tamper-proof.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Trust Badge / Seal -->
+<section class="text-center py-16 border-t-0 bg-surface-container-lowest rounded-xl mb-12 shadow-sm">
+<div class="max-w-2xl mx-auto flex flex-col items-center gap-4">
+<div class="w-24 h-24 bg-gradient-to-tr from-secondary to-secondary-fixed flex items-center justify-center rounded-full mb-4 shadow-lg">
+<span class="material-symbols-outlined text-5xl text-white" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<h2 class="font-headline text-3xl font-bold text-indigo-950">Official Trust Seal</h2>
+<p class="text-on-surface-variant mb-8 px-6">
+                    This seal confirms that Ramesh Kumar has passed all preliminary background checks and holds a Tier 1 Trust Ranking in the Invisible India network.
+                </p>
+<div class="flex flex-wrap justify-center gap-4">
+<img alt="Trust Seal" class="w-16 h-16 opacity-80" data-alt="minimalist gold circular seal design with intricate vector patterns and official government emblem style lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4qrQT0z2090A93MnSWNx8-f3xwH1aTB3-KL39UEbm7nbaBiRsR9DqwND4jvnrCQgYjdNDMghlkEesa0MQPZ3hgDFjcs_RWoFmXbhnjjru5D7022MJSQqLlkSbLw3N0zw-JBmgeTGL6plcmQ6P1I9AjHGT8Q9NlGf9QwV2Dz-g22r_lb5e5AU9r8GXzJPUBae8Qj-0hWhE__R05pfEOpjRbPLmCub76JcIraxo0T3y0PCJ-xg49E-Bv3nDTYqHcf4zeHNXSE-DeQO-"/>
+<img alt="Verified Badge" class="w-16 h-16 opacity-80" data-alt="modern digital verification badge with holographic elements on white background clean vector lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK2cT5jHunVXwNQl4wXdMbdut30ZphKXk_u92c-AEjjoWogh2Y8ZjvP-NX-Lv4fUdj6aXfNCzizJGe5BDmVuKjvf4KIFuYO2j6pvMzDUXkOr12NZ7b899MOdtmbSTtvyFmNCJ81HbkJn4hR9kIhXBgpsAb51LeOdeltb638YiU6kcuYqeQcU6UbEkVNgZzJUseIS__xEkHKuKxiYkzNve1Eu44EIaHNUHjRyJBjEDdKB5UK22jzpqQlsg9XsGKVGd-jpdB2bp-hZbD"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container-low w-full py-12 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-4">
+<span class="font-bold text-indigo-950 text-xl">Invisible India</span>
+<p class="text-slate-500 font-manrope text-sm max-w-xs">Connecting the backbone of our economy to the resources they deserve. Safe, secure, and private.</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-slate-500 hover:text-indigo-600 transition-colors duration-300" href="#">Government Schemes</a>
+<a class="text-slate-500 hover:text-indigo-600 transition-colors duration-300" href="#">Help Center</a>
+<a class="text-slate-500 hover:text-indigo-600 transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-indigo-600 transition-colors duration-300" href="#">Contact Support</a>
+</div>
+<div class="flex flex-col justify-end items-start md:items-end">
+<span class="text-slate-500 font-manrope text-sm">© 2024 Invisible India. Secure &amp; Private.</span>
+</div>
+</div>
+</footer>
+</body></html>

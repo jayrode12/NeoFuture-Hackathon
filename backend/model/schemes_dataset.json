@@ -1,0 +1,112 @@
+[
+  {
+    "schemeId": "s1",
+    "name": "Mudra Loan - Shishu",
+    "type": "Loan",
+    "provider": "Government",
+    "amount": "Up to ₹50,000",
+    "minScore": 45,
+    "description": "Collateral-free loan for small businesses and vendors",
+    "applyUrl": "https://www.mudra.org.in",
+    "category": "Micro Loan"
+  },
+  {
+    "schemeId": "s2",
+    "name": "Mudra Loan - Kishor",
+    "type": "Loan",
+    "provider": "Government",
+    "amount": "₹50,000 to ₹5 Lakh",
+    "minScore": 60,
+    "description": "Business expansion loan for growing small enterprises",
+    "applyUrl": "https://www.mudra.org.in",
+    "category": "Micro Loan"
+  },
+  {
+    "schemeId": "s3",
+    "name": "Mudra Loan - Tarun",
+    "type": "Loan",
+    "provider": "Government",
+    "amount": "₹5 Lakh to ₹10 Lakh",
+    "minScore": 75,
+    "description": "High-value loans for established small businesses",
+    "applyUrl": "https://www.mudra.org.in",
+    "category": "Micro Loan"
+  },
+  {
+    "schemeId": "s4",
+    "name": "PM Suraksha Bima Yojana",
+    "type": "Insurance",
+    "provider": "Government",
+    "amount": "₹2 Lakh accident cover",
+    "minScore": 40,
+    "description": "Affordable accident insurance at just ₹20 per year",
+    "applyUrl": "https://www.jansuraksha.gov.in",
+    "category": "Insurance"
+  },
+  {
+    "schemeId": "s5",
+    "name": "PM Jeevan Jyoti Bima Yojana",
+    "type": "Insurance",
+    "provider": "Government",
+    "amount": "₹2 Lakh life cover",
+    "minScore": 45,
+    "description": "Life insurance coverage at ₹436 per year",
+    "applyUrl": "https://www.jansuraksha.gov.in",
+    "category": "Insurance"
+  },
+  {
+    "schemeId": "s6",
+    "name": "Pradhan Mantri Jan Dhan Yojana",
+    "type": "Banking",
+    "provider": "Government",
+    "amount": "Zero balance account + ₹10,000 overdraft",
+    "minScore": 30,
+    "description": "Basic savings account with financial inclusion benefits",
+    "applyUrl": "https://pmjdy.gov.in",
+    "category": "Banking"
+  },
+  {
+    "schemeId": "s7",
+    "name": "Atal Pension Yojana",
+    "type": "Pension",
+    "provider": "Government",
+    "amount": "₹1,000 to ₹5,000 monthly pension",
+    "minScore": 50,
+    "description": "Pension scheme for unorganized sector workers",
+    "applyUrl": "https://www.npscra.nsdl.co.in",
+    "category": "Social Security"
+  },
+  {
+    "schemeId": "s8",
+    "name": "Stand-Up India Loan",
+    "type": "Loan",
+    "provider": "Government",
+    "amount": "₹10 Lakh to ₹1 Crore",
+    "minScore": 80,
+    "description": "Loans for entrepreneurship (SC/ST/Women)",
+    "applyUrl": "https://www.standupmitra.in",
+    "category": "Business Loan"
+  },
+  {
+    "schemeId": "s9",
+    "name": "PM SVANidhi Scheme",
+    "type": "Loan",
+    "provider": "Government",
+    "amount": "Up to ₹10,000 working capital",
+    "minScore": 35,
+    "description": "Micro-credit scheme for street vendors",
+    "applyUrl": "https://pmsvanidhi.mohua.gov.in",
+    "category": "Micro Loan"
+  },
+  {
+    "schemeId": "s10",
+    "name": "ESIC Social Security Scheme",
+    "type": "Insurance",
+    "provider": "Government",
+    "amount": "Medical + disability benefits",
+    "minScore": 55,
+    "description": "Health and social security scheme for workers",
+    "applyUrl": "https://www.esic.gov.in",
+    "category": "Healthcare"
+  }
+]
