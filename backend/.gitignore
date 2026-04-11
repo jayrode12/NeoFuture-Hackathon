@@ -3,3 +3,4 @@ __pycache__/
 .env
 invisible-india-*.json
 *firebase*adminsdk*.json
+nhenv/
